@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".views.HeroActivity"
+            android:padding="6dp">
+
+        <TextView
+                android:text="Attributes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textAttributes"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/heroRace" android:layout_marginStart="5dp"/>
+        <TextView
+                android:text="Hero Race"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/heroRace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/textRace"
+                android:textSize="18sp" android:layout_marginStart="5dp"/>
+        <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"/>
+
+        <View
+                android:id="@+id/viewSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cecece"
+                app:layout_constraintTop_toBottomOf="@id/guideline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" android:layout_marginTop="20dp"/>
+        <TextView
+                android:text="Hero Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/heroName"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="1.6"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageView" android:textColor="#ffffff" android:textSize="30sp"
+                android:textStyle="bold" android:layout_marginBottom="5dp"/>
+        <TextView
+                android:text="Hero Full Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/heroFullName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/textFullName" android:textSize="18sp"
+                android:layout_marginStart="5dp"/>
+
+        <TextView
+                android:text="Height:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textHeight"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/textAttributes"
+                android:layout_marginStart="10dp"/>
+        <TextView
+                android:id="@+id/textIntelligence"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/intelligence"
+                android:textStyle="bold"
+                android:textSize="@dimen/powerstats_font_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@+id/viewSeparator"/>
+
+        <!--<SeekBar
+                android:id="@+id/seekBarIntelligence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textIntelligence"
+                android:paddingTop="10dp"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb_intelligence"
+                android:progressDrawable="@drawable/seekbar_progress_intelligence"/>-->
+
+        <com.zhouyou.view.seekbar.SignSeekBar
+                android:id="@+id/seekBarIntelligence"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:ssb_track_size="6dp"
+                app:ssb_second_track_color="@color/colorEndIntelligence"
+                app:ssb_track_color="@color/colorStartIntelligence"
+                app:ssb_thumb_color="@color/colorIntelligence"
+                app:ssb_section_text_color="@color/colorIntelligence"
+                app:ssb_show_sign="true"
+                app:ssb_show_thumb_text="false"
+                app:ssb_sign_arrow_height="5dp"
+                app:ssb_sign_arrow_width="10dp"
+                app:ssb_sign_border_color="@color/colorIntelligence"
+                app:ssb_sign_border_size="1dp"
+                app:ssb_sign_show_border="true"
+                app:ssb_sign_color="@color/colorIntelligence"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textIntelligence"/>
+
+        <TextView
+                android:id="@+id/textStrength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/strength"
+                android:textStyle="bold"
+                android:textSize="@dimen/powerstats_font_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekBarIntelligence"/>
+
+        <com.zhouyou.view.seekbar.SignSeekBar
+                android:id="@+id/seekBarStrength"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:ssb_track_size="6dp"
+                app:ssb_second_track_color="@color/colorEndStrength"
+                app:ssb_track_color="@color/colorStartStrength"
+                app:ssb_thumb_color="@color/colorStrength"
+                app:ssb_section_text_color="@color/colorStrength"
+                app:ssb_show_sign="true"
+                app:ssb_show_thumb_text="false"
+                app:ssb_sign_arrow_height="5dp"
+                app:ssb_sign_arrow_width="10dp"
+                app:ssb_sign_border_color="@color/colorStrength"
+                app:ssb_sign_border_size="1dp"
+                app:ssb_sign_show_border="true"
+                app:ssb_sign_color="@color/colorStrength"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textStrength"/>
+
+        <TextView
+                android:id="@+id/textSpeed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/speed"
+                android:textStyle="bold"
+                android:textSize="@dimen/powerstats_font_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekBarStrength"/>
+
+        <com.zhouyou.view.seekbar.SignSeekBar
+                android:id="@+id/seekBarSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:ssb_track_size="6dp"
+                app:ssb_second_track_color="@color/colorEndSpeed"
+                app:ssb_track_color="@color/colorStartSpeed"
+                app:ssb_thumb_color="@color/colorSpeed"
+                app:ssb_section_text_color="@color/colorSpeed"
+                app:ssb_show_sign="true"
+                app:ssb_show_thumb_text="false"
+                app:ssb_sign_arrow_height="5dp"
+                app:ssb_sign_arrow_width="10dp"
+                app:ssb_sign_border_color="@color/colorSpeed"
+                app:ssb_sign_border_size="1dp"
+                app:ssb_sign_show_border="true"
+                app:ssb_sign_color="@color/colorSpeed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textSpeed"/>
+
+
+        <TextView
+                android:id="@+id/textDurability"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/durability"
+                android:textStyle="bold"
+                android:textSize="@dimen/powerstats_font_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekBarSpeed"/>
+        
+        <com.zhouyou.view.seekbar.SignSeekBar
+                android:id="@+id/seekBarDurability"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:ssb_track_size="6dp"
+                app:ssb_second_track_color="@color/colorEndDurability"
+                app:ssb_track_color="@color/colorStartDurability"
+                app:ssb_thumb_color="@color/colorDurability"
+                app:ssb_section_text_color="@color/colorDurability"
+                app:ssb_show_sign="true"
+                app:ssb_show_thumb_text="false"
+                app:ssb_sign_arrow_height="5dp"
+                app:ssb_sign_arrow_width="10dp"
+                app:ssb_sign_border_color="@color/colorDurability"
+                app:ssb_sign_border_size="1dp"
+                app:ssb_sign_show_border="true"
+                app:ssb_sign_color="@color/colorDurability"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textDurability"/>
+
+
+        <TextView
+                android:id="@+id/textPower"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/power"
+                android:textStyle="bold"
+                android:textSize="@dimen/powerstats_font_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekBarDurability"/>
+
+        <com.zhouyou.view.seekbar.SignSeekBar
+                android:id="@+id/seekBarPower"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:ssb_track_size="6dp"
+                app:ssb_second_track_color="@color/colorEndPower"
+                app:ssb_track_color="@color/colorStartPower"
+                app:ssb_thumb_color="@color/colorPower"
+                app:ssb_section_text_color="@color/colorPower"
+                app:ssb_show_sign="true"
+                app:ssb_show_thumb_text="false"
+                app:ssb_sign_arrow_height="5dp"
+                app:ssb_sign_arrow_width="10dp"
+                app:ssb_sign_border_color="@color/colorPower"
+                app:ssb_sign_border_size="1dp"
+                app:ssb_sign_show_border="true"
+                app:ssb_sign_color="@color/colorPower"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textPower"/>
+        
+
+        <TextView
+                android:id="@+id/textCombat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/combat"
+                android:textStyle="bold"
+                android:textSize="@dimen/powerstats_font_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekBarPower"/>
+
+        <com.zhouyou.view.seekbar.SignSeekBar
+                android:id="@+id/seekBarCombat"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:ssb_track_size="6dp"
+                app:ssb_second_track_color="@color/colorEndCombat"
+                app:ssb_track_color="@color/colorStartCombat"
+                app:ssb_thumb_color="@color/colorCombat"
+                app:ssb_section_text_color="@color/colorCombat"
+                app:ssb_show_sign="true"
+                app:ssb_show_thumb_text="false"
+                app:ssb_sign_arrow_height="5dp"
+                app:ssb_sign_arrow_width="10dp"
+                app:ssb_sign_border_color="@color/colorCombat"
+                app:ssb_sign_border_size="1dp"
+                app:ssb_sign_show_border="true"
+                app:ssb_sign_color="@color/colorCombat"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textCombat"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintGuide_percent="0.29"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline2" app:layout_constraintGuide_percent="0.5060827"/>
+        <TextView
+                android:text="Full Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textFullName"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline2"
+                android:layout_marginStart="5dp"/>
+        <TextView
+                android:text="Race"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textRace"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/heroFullName" android:layout_marginStart="5dp"/>
+        <TextView
+                android:text="0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/heroHeight" app:layout_constraintStart_toEndOf="@+id/textHeight"
+                android:layout_marginStart="5dp" android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/textAttributes" android:textSize="18sp"/>
+        <TextView
+                android:text="Weight:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textWeight"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textHeight"
+                app:layout_constraintStart_toStartOf="@+id/guideline2" android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"/>
+        <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/heroWeight"
+                android:textSize="18sp" app:layout_constraintTop_toBottomOf="@+id/textHeight"
+                app:layout_constraintStart_toEndOf="@+id/textWeight" android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

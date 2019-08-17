@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="powerstats_font_size">18sp</dimen>
+    <dimen name="custom_thumb_dimen">25dp</dimen>
+    <dimen name="custom_seek_dimen">15dp</dimen>
+    <dimen name="custom_seek_radius_dimen">5dp</dimen>
+</resources>

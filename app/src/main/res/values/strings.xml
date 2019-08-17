@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Super Heros</string>
+    <string name="hero_name">Hero Name</string>
+    <string name="publisher">Publisher</string>
+    <string name="strength">Strength</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="speed">Speed</string>
+    <string name="durability">Durability</string>
+    <string name="power">Power</string>
+    <string name="combat">Combat</string>
+    <string name="type_hero_name">Type here the hero name</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4804AD</color>
+    <color name="colorPrimaryDark">#2F0175</color>
+    <color name="colorAccent">#745E9E</color>
+
+    <color name="colorIntelligence">#2291A3</color>
+    <color name="colorStartIntelligence">#DEF9FF</color>
+    <color name="colorEndIntelligence">#00CDFF</color>
+
+    <color name="colorStrength">#8A0404</color>
+    <color name="colorStartStrength">#FFC6C6</color>
+    <color name="colorEndStrength">#FF0000</color>
+
+    <color name="colorSpeed">#C5AB09</color>
+    <color name="colorStartSpeed">#FAF2B4</color>
+    <color name="colorEndSpeed">#FFD200</color>
+
+    <color name="colorPower">#3F03AA</color>
+    <color name="colorStartPower">#C4A2FF</color>
+    <color name="colorEndPower">#6400FF</color>
+
+    <color name="colorCombat">#127E02</color>
+    <color name="colorStartCombat">#BCFDB1</color>
+    <color name="colorEndCombat">#22FF00</color>
+
+    <color name="colorDurability">#923407</color>
+    <color name="colorStartDurability">#FCBDA3</color>
+    <color name="colorEndDurability">#FF5400</color>
+
+</resources>
